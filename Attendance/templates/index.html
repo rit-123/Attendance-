@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+<h3>Select a date to view: </h2>
+<form action="/" method="post">
+{% for date in dates %}
+
+    <input type="radio" id="date" name="date" value="{{ date }}" required> {{ date }}
+
+<br>
+    
+{% endfor %}
+<br>
+{% if dates %}
+<button class="btn btn-primary" type="submit">View</button>
+{% endif %}
+</form>
+{% endblock %}

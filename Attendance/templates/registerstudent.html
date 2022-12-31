@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register New Student
+{% endblock %}
+
+{% block main %}
+<form action="/registerstudent" method="post">
+    <div class="mb-3">
+        Name of the Student:<input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="username" name="name" placeholder="Name" type="text">
+    </div>
+    
+    <button class="btn btn-primary" type="submit">Register</button>
+</form>
+{% endblock %}
